@@ -1,8 +1,12 @@
 {
     "name": "punchfork"
   , "description": "Node.js library for accessing Punchfork's API at <http://punchfork.com/api>"
-  , "version": "0.0.1"
+  , "version": "0.0.2"
   , "author": "Nick Baugh <niftylettuce@gmail.com>"
+  , "contributors": [
+        { "name": "Nick Baugh", "email": "niftylettuce@gmail.com" }
+      , { "name": "Mark Lussier", "email": "mlussier@gmail.com" }
+    ]
   , "keywords": [ "punchfork", "node-punchfork", "api" ]
   , "homepage": "https://github.com/niftylettuce/node-punchfork"
   , "repository": {
@@ -18,5 +22,5 @@
      "vows": ">= 0.6.2"
   }
   , "scripts": { "test": "vows test/*" }
-  
+
 }

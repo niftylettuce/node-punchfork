@@ -61,6 +61,7 @@ PUNCHFORK_API=your-api vows test/*
 ## Contributors
 
 * Nick Baugh <niftylettuce@gmail.com>
+* Mark Lussier <mlussier@gmail.com>
 
 ## License
 
