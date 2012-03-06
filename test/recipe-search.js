@@ -145,6 +145,19 @@ vows.describe('recipeSearch tests').addBatch({
       assert.isDefined(recipes);
     }
   },
+  'Recipe search with a search term that returns recipes filtered for dietary requirements: vegetarian': {
+    topic: function() {
+      punchfork.recipeSearch({
+        q: 'soup vegetarian',
+		total: true		
+      }, this.callback);
+    },
+    'returns recipes': function(err, recipes) {
+      assert.isNull(err);
+      assert.isDefined(recipes);
+      assert.isDefined(recipes.total);	  
+    }
+  },  
   'Recipe search that returns recipes filtered for dietary requirements: vegan': {
     topic: function() {
       punchfork.recipeSearch({
@@ -155,5 +168,19 @@ vows.describe('recipeSearch tests').addBatch({
       assert.isNull(err);
       assert.isDefined(recipes);
     }
-  }  
+  },
+  'Recipe search with a search term that returns recipes filtered for dietary requirements: vegan': {
+    topic: function() {
+      punchfork.recipeSearch({
+        q: 'soup vegan',
+		total: true		
+      }, this.callback);
+    },
+    'returns recipes': function(err, recipes) {
+      assert.isNull(err);
+      assert.isDefined(recipes);
+      assert.isDefined(recipes.total);	  
+    }
+  },  
+  
 }).export(module, { error: false });
