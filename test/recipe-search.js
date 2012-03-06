@@ -133,5 +133,27 @@ vows.describe('recipeSearch tests').addBatch({
       assert.isDefined(recipes);
       assert.isDefined(recipes.total);
     }
-  }
+  },
+  'Recipe search that returns recipes filtered for dietary requirements: vegetarian': {
+    topic: function() {
+      punchfork.recipeSearch({
+        q: 'vegetarian'
+      }, this.callback);
+    },
+    'returns recipes': function(err, recipes) {
+      assert.isNull(err);
+      assert.isDefined(recipes);
+    }
+  },
+  'Recipe search that returns recipes filtered for dietary requirements: vegan': {
+    topic: function() {
+      punchfork.recipeSearch({
+        q: 'vegan'
+      }, this.callback);
+    },
+    'returns recipes': function(err, recipes) {
+      assert.isNull(err);
+      assert.isDefined(recipes);
+    }
+  }  
 }).export(module, { error: false });
